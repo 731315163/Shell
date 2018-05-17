@@ -1,4 +1,5 @@
 #! /bin/bash
-source ./test.sh
-testfun
+source convertpath.sh
 
+path='Dd:\sh'
+tolpath
