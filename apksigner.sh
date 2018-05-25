@@ -1,10 +1,8 @@
 #! /bin/bash
 sign(){
-  apksignerDir='D:\Sdk\build-tools\27.0.3'
-  apksigner='\lib\apksigner.jar'
-  key='D:\Resource\KeyStore\user.keystore'
-  apk='D:\Soft\ApkTool\android.apk'
-  #java.exe -Djava.ext.dirs=$apksignerDir -jar -Duser.language=en $apksignerDir$apksigner $1 $2
-  java.exe -Djava.ext.dirs=$apksignerDir -jar -Duser.language=en $apksignerDir$apksigner sign -ks $key $apk
+  apksigner='D:\\Sdk\\build-tools\\27.0.3\\lib\\apksigner.jar'
+  key='D:\\Resource\\user.keystore'
+  apk='D:\\Soft\\ApkTool\android.apk'
+  java.exe -jar $apksigner sign --ks $key --ks-pass pass:q8510912 $apk
+  echo '重新签名完毕'
 }
-sign 
