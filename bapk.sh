@@ -3,7 +3,7 @@ source convertpath.sh
 source buildandroid.sh
 source apktool.sh
 source apksigner.sh
-unityproject=D:/Project/UnityProject/TowerCrush
+unityproject='D:\Project\UnityProject\HelixJumpPackageV6'
 build $unityproject
 path=$unityproject
 tolpath
@@ -16,3 +16,4 @@ decompile
 copyso
 compile
 sign
+source installapk.sh
