@@ -1,0 +1,4 @@
+echo $(ps -ef | grep testdocumentary-restart.sh | grep -v grep|awk '{print $2}')
+echo $(ps -ef | grep Simulate.dll | grep -v grep|awk '{print $2}')
+kill $(ps -ef | grep testdocumentary-restart.sh | grep -v grep | awk '{print $2}')
+kill $(ps -ef | grep Simulate.dll | grep -v grep | awk '{print $2}')

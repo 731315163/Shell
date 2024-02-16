@@ -1,0 +1,1 @@
+nohup ./testdocumentary-restart.sh &
