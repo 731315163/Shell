@@ -1,0 +1,11 @@
+# 指定路径
+path="/usr/app/regression"
+
+# 判断当前工作目录是否在指定路径下
+if [[ "$PWD" != "$path"* && "$PWD" != "$path" ]]; then
+    # 如果不在，则打开该路径
+    echo "Your current directory is not under $path. Changing now..."
+    cd $path
+else
+    echo "You are already in the directory $path or its subdirectories."
+fi
