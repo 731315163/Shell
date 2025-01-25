@@ -1,0 +1,20 @@
+#使用时请不要保留任何注释
+/var/log/apache2/*.log {
+                        
+    hourly              # 每天检查一次daily
+    missingok           # 如果日志文件不存在，不报错
+    rotate 14           # 保留14天的日志文件
+    compress            # 对旧的日志文件进行压缩
+    delaycompress       # 延迟压缩，直到当前日志文件被轮换后才开始压缩
+    notifempty          # 只有当日志文件不为空时才轮换
+    create              # 创建新的日志文件，并设置权限为640，所有者为root，组为adm
+    sharedscripts       # 使用共享脚本，即postrotate和endscript部分只对配置文件中的第一个实例执行
+    postrotate          # 在轮换后执行脚本来重新加载Apache配置
+        /etc/init.d/apache2 reload > /dev/null
+    endscript
+}
+#手动强制执行
+logrotate -f /etc/logrotate.conf
+
+#debug执行
+logrotate -d /etc/logrotate.conf

@@ -1,0 +1,2 @@
+freqtrade install-ui
+freqtrade create-userdir --userdir user_data

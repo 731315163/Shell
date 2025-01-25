@@ -1,0 +1,1 @@
+New-Item -ItemType SymbolicLink -Path .\mathematics -Target C:\project\Forecast\mathematics
