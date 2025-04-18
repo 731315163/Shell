@@ -1,3 +1,4 @@
+#!/bin/bash
 freqtrade create-userdir --userdir user_data
 freqtrade new-config --config user_data/config.json
 freqtrade download-data --dl-trades -c user_data/config.json --timerange 20230101- 
