@@ -1,0 +1,5 @@
+# run connector
+cd connector && cargo run binancefutures binancefutures ./examples/binancefutures.toml
+
+# run strategy
+cd hftbacktest && cargo run --example gridtrading_live
