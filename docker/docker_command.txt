@@ -1,0 +1,17 @@
+#docker build tag .代表当前路径
+docker build -t catspeed/freqtrade .   
+
+上传镜像
+docker push catspeed/freqtrade
+
+拉去镜像
+docker pull catspeed/freqtrade
+
+# 查看悬空镜像
+docker images -f "dangling=true"
+
+
+# 删除悬空镜像
+docker image prune
+#删除所有未被任何容器使用的镜像（包括悬空镜像和未标记的镜像）
+docker image prune -a

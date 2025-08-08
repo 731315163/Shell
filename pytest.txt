@@ -1,0 +1,2 @@
+//获取详细错误日志
+pytest -v --capture=no
